@@ -45,6 +45,7 @@ This project contains a Cloudflare Worker script that collects and returns vario
   "Latitude, Longitude": "37.7749,-122.4194",
   "Postal Code": "94107",
   "Timezone": "PST",
+  "Language": "en-US,en;q=0.9",
   "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36",
   "Browser Info": "Chrome on Windows",
   "TLS Version": "TLSv1.2",
@@ -66,6 +67,7 @@ PoP Site: SFO
 Latitude, Longitude: 37.7749,-122.4194
 Postal Code: 94107
 Timezone: PST
+Language: en-US,en;q=0.9
 User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
 Browser Info: Chrome on Windows
 TLS Version: TLSv1.2
@@ -85,3 +87,6 @@ Estimated Data Usage (bytes): 512
 ### Demo
 You can check this address for demo or even personal usage:
 [Erised.ir](https://erised.ir)
+
+### Copyright
+MIT Fork from [silverbios](https://github.com/silverbios/erised)
