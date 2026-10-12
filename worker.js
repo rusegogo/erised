@@ -11,7 +11,10 @@ function getBrowserInfo(userAgent) {
                   uaData.includes("firefox") ? "Firefox" :
                   uaData.includes("safari") ? "Safari" :
                   "Unknown Browser";
-  return `${browser} on ${uaData.includes("linux") ? "Linux" :
+  // 将安卓从linux中显示分离出来，必须在linux字符串判断前面
+  // Separate the Android display from Linux; this must precede the Linux string check
+  return `${browser} on ${uaData.includes("Android") ? "Android" :
+                          uaData.includes("linux") ? "Linux" :
                           uaData.includes("windows") ? "Windows" :
                           uaData.includes("mac") ? "macOS" : "Unknown OS"}`;
 }
@@ -31,6 +34,7 @@ async function buildDetailsResponse(request) {
     "Latitude, Longitude": request.cf.latitude && request.cf.longitude ? `${request.cf.latitude},${request.cf.longitude}` : "N/A",
     "Postal Code": request.cf.postalCode || "N/A",
     "Timezone": request.cf.timezone || "N/A",
+    “Languages”： request.headers.get('Accept-Language') || "N/A",
     "User Agent": request.headers.get('User-Agent'),
     "Browser Info": getBrowserInfo(request.headers.get('User-Agent')),
     "TLS Version": request.cf.tlsVersion || "N/A",
