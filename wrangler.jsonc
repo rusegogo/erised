@@ -1,0 +1,6 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "erised",           // 替换为你的 Worker 名称
+  "main": "worker.js",           // 指向你的入口文件（相对路径）
+  "compatibility_date": "2026-10-12"  // 使用当前日期
+}
