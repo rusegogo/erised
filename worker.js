@@ -44,7 +44,7 @@ async function buildDetailsResponse(request) {
   };
 
   // Simulate slight delay to ensure response time is noticeable
-  await new Promise(resolve => setTimeout(resolve, 1)); // 1ms delay
+  //await new Promise(resolve => setTimeout(resolve, 1)); // 1ms delay
 
   // Metrics calculation
   const end = Date.now(); // End timer for response time calculation
