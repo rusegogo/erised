@@ -34,7 +34,7 @@ async function buildDetailsResponse(request) {
     "Latitude, Longitude": request.cf.latitude && request.cf.longitude ? `${request.cf.latitude},${request.cf.longitude}` : "N/A",
     "Postal Code": request.cf.postalCode || "N/A",
     "Timezone": request.cf.timezone || "N/A",
-    “Languages”： request.headers.get('Accept-Language') || "N/A",
+    "Languages"： request.headers.get('Accept-Language') || "N/A",
     "User Agent": request.headers.get('User-Agent'),
     "Browser Info": getBrowserInfo(request.headers.get('User-Agent')),
     "TLS Version": request.cf.tlsVersion || "N/A",
